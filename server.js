@@ -6,11 +6,11 @@ mock_user_data = [
   {'name' : 'Arshita'}
 ]
 
-app.get('/users', (req, res) => {
+app.get('/users/:id', (req, res) => {
     res.json({
       success : true,
       message : 'Success!',
-      users : mock_user_data
+      users : req.params.id
     })
 })
 
